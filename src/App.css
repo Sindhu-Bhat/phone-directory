@@ -1,0 +1,42 @@
+.component-body-container {
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 40% 30% auto;
+    margin-bottom: 10px;
+}
+
+.heading-container {
+    margin: 30px 0 30px 0;
+    width: 100%;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 1.15rem;
+    word-wrap: break-word;
+    padding-right: 60px;
+}
+
+.item-heading {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #808080;
+    text-transform: uppercase;
+}
+
+.button{
+    color: white;
+    text-align: center;
+    font-size: large;
+    background-color: #7ab97a;
+    padding: 12px;
+    margin: 20px;
+    border: none;
+    width: 80px;
+    cursor: pointer;
+    outline: none;
+}
+ 
