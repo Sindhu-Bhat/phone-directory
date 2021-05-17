@@ -20,7 +20,7 @@ class App extends Component {
 
     return (
       <div className='component-container'>
-      <Header />
+      <Header heading='Phone Directory' />
       <div className='component-body-container'>
         <button className='button add-button'>ADD</button>
 
