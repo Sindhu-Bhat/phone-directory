@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import Header from './Header'
 import './AddSubscriber.css'
 
-export default class AddSubscriber extends Component {
+class AddSubscriber extends Component {
+    
     constructor(){
         super()
         this.state={
@@ -18,6 +19,16 @@ export default class AddSubscriber extends Component {
         this.setState(state)
     }
 
+    onFormSubmit(e){
+        e.preventDefault();
+        this.props.addSubscriberHandler(this.state)
+        this.setState({
+            id:0,
+            name:'',
+            phone:''            
+        })
+    }
+
     render() {
         const {name, phone}=this.state
         return (
@@ -26,7 +37,7 @@ export default class AddSubscriber extends Component {
                 <div className='component-body-container'>
                     <button className='button'>BACK</button>
 
-                    <form className='subscriber-form'>
+                    <form className='subscriber-form' onSubmit={this.onFormSubmit.bind(this)}>
                         <label htmlFor='name' className='label-control'>Name</label>
                         <input id='name' type='text' className='input-control' name='name' 
                             onChange={(event)=>this.inputChangeHandler(event)}/> <br/><br/>
@@ -48,3 +59,5 @@ export default class AddSubscriber extends Component {
         )
     }
 }
+
+export default  AddSubscriber;
