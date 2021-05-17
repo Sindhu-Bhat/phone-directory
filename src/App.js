@@ -1,7 +1,7 @@
 import React,  { Component }  from 'react';
 import Header from "./Header";
 import './App.css';
- 
+
 class App extends Component {
 
   render() {
@@ -20,6 +20,7 @@ class App extends Component {
 
     return (
       <div className='component-container'>
+      
       <Header heading='Phone Directory' />
       <div className='component-body-container'>
         <button className='button add-button'>ADD</button>
@@ -38,8 +39,9 @@ class App extends Component {
           </div>
           })
         }
-        
      </div>
+     
+       
     </div>
     )
   }
