@@ -4,19 +4,25 @@ import './App.css';
 
 class App extends Component {
 
+  constructor (){
+    super()
+    this.state={
+      subscribersList:[]
+    }
+  }
   render() {
-    let subscribers=[
-      {
-        'id':1,
-        'name':'Sindhu Bhat',
-        'phone':'8888888888'
-      },
-      {
-        'id':2,
-        'name':'Shilpa Bhat',
-        'phone':'9999999999'
-      }
-    ]
+    // let subscribers=[
+    //   {
+    //     'id':1,
+    //     'name':'Sindhu Bhat',
+    //     'phone':'8888888888'
+    //   },
+    //   {
+    //     'id':2,
+    //     'name':'Shilpa Bhat',
+    //     'phone':'9999999999'
+    //   }
+    // ]
 
     return (
       <div className='component-container'>
@@ -31,7 +37,7 @@ class App extends Component {
         </div>
 
         {
-          subscribers.map(sub=>{
+          this.state.subscribersList.map(sub=>{
             return <div className='grid-container' key={sub.id}>
             <span className='grid-item'>{sub.name}</span>
             <span className='grid-item'> {sub.phone}</span>  
