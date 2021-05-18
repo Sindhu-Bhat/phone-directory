@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import Header from './Header'
 import './AddSubscriber.css'
-
+import {Link} from 'react-router-dom'
 class AddSubscriber extends Component {
-    
+
     constructor(){
         super()
         this.state={
@@ -27,6 +27,7 @@ class AddSubscriber extends Component {
             name:'',
             phone:''            
         })
+        this.props.history.push('/')
     }
 
     render() {
@@ -35,7 +36,7 @@ class AddSubscriber extends Component {
             <div>
                 <Header heading='Add Subscriber'/>
                 <div className='component-body-container'>
-                    <button className='button'>BACK</button>
+                    <Link to='/'><button className='button'>BACK</button></Link>
 
                     <form className='subscriber-form' onSubmit={this.onFormSubmit.bind(this)}>
                         <label htmlFor='name' className='label-control'>Name</label>
