@@ -1,0 +1,19 @@
+.component-body-container {
+    padding: 20px;
+}
+
+.button{
+    text-align: center;
+    font-size: large;
+    padding: 12px;
+    margin: 20px;
+    border: none;
+    width: 90px;
+    cursor: pointer;
+    outline: none;
+}
+ 
+.add-button{
+    background-color: #7ab97a;
+    color: white;
+}
